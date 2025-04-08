@@ -3,14 +3,12 @@ import pickle
 import numpy as np
 import pandas as pd
 
-# Cargar el modelo y el scaler
 with open('modelo_svm.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
 with open('scaler.pkl', 'rb') as scaler_file:
     scaler = pickle.load(scaler_file)
 
-# Diccionario con nombres de features, descripciones y opciones válidas
 feature_info = {
     'last_gpa': {
         'description': 'Promedio general acumulado del semestre anterior (sobre 4).',
